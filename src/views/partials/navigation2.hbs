@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="/*background-color: #008000;*/">
+  <a class="navbar-brand" href="/"> <img src="../img/sello.png" alt="" class="d-inline-block align-top" width="30" height="30" alt="">LDBSPSP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menujugador" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Jugador
+        </a>
+        <div class="dropdown-menu" aria-labelledby="menujugador">
+          <a class="dropdown-item" href="pages/ingreso_jugador.html">Ingreso</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Busqueda</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Ver</a>
+
+        </div>
+      </li>
+
+      {{#if users}}
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menuequipo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Equipo
+        </a>
+        <div class="dropdown-menu" aria-labelledby="menuequipo">
+          <a class="dropdown-item" href="/links/add">Ingreso</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Busqueda</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Ver</a>
+
+        </div>
+      </li>
+
+      {{/if}}
+      <li class="nav-item">
+        <a href="/profile" class="nav-link">Profile</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/logout" class="nav-link">Cerrar Session</a>
+      </li>
+
+      {{else}}
+
+      <li class="nav-item">
+        <a href="/signin" class="nav-link">Sing in</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/singup" class="nav-link">Sing up</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="menucategoria" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categoria
+        </a>
+        <div class="dropdown-menu" aria-labelledby="menucategoria">
+          <a class="dropdown-item" href="#">Ingreso</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Busqueda</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Ver</a>
+
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
